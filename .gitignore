@@ -1,3 +1,6 @@
 go.sum
 test.db
 *tempfile*
+*.exe
+production.yml
+vendor

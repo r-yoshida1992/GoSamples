@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <link href="css/common.css" rel="stylesheet"/>
+    <script src="js/main.js"></script>
+    <title>Login</title>
+</head>
+<body>
+<header>
+    <nav class="nav-extended">
+        <div class="nav-wrapper cyan darken-4 row">
+            <div class="col s12">
+                <div class="brand-logo">e-Learning sample</div>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">item1</a></li>
+                    <li><a href="#">item2</a></li>
+                    <li><a href="#">item3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">item1</a></li>
+        <li><a href="#">item2</a></li>
+        <li><a href="#">item3</a></li>
+    </ul>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 l6 offset-l3">
+            <h2>Sign In</h2>
+            <form method="post" action="/login">
+                {{range .errors}}
+                    <p class="red-text">{{.}}</p>
+                {{end}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="userId" name="userId" maxlength="16">
+                        <label for="userId">User ID</label>
+                        <!--                        <span th:if="${#fields.hasErrors('userId')}" class="red-text" th:errors="*{userId}"></span>-->
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="password" id="password" name="password" maxlength="16">
+                        <label for="password">Password</label>
+                        <!--                        <span th:if="${#fields.hasErrors('password')}" class="red-text"-->
+                        <!--                              th:errors="*{password}"></span>-->
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">SIGN IN</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <h4>ログアウト</h4>
+        <p>ログアウトします。よろしいですか？</p>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn-flat">戻る</a>
+        <a href="/" class="modal-close waves-effect waves-green btn-flat">ログアウト</a>
+    </div>
+</div>
+
+</body>
+</html>

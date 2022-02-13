@@ -1,0 +1,8 @@
+port: 8080
+root_path: /projects/X/GoSamples/src/web_application/e_learning_sample
+db:
+  url: localhost
+  user: test
+  password: test
+  port: 3306
+  database: test
