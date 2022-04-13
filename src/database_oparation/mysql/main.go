@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoSamples/src/database_oparation/base/common"
+	"database_oparation/base/common"
 	_ "github.com/go-sql-driver/mysql" //直接的な記述が無いが、インポートしたいものに対しては"_"を頭につける決まり
 	"github.com/jinzhu/gorm"
 )

@@ -1,6 +1,7 @@
 package config
 
 import (
+	"fmt"
 	"github.com/spf13/viper"
 )
 
@@ -11,9 +12,9 @@ func Init(env string) {
 	c = viper.New()
 	c.SetConfigFile("yaml")
 	c.SetConfigName(env)
-	c.AddConfigPath("src/web_application/e_learning_sample/config/environments/")
+	c.AddConfigPath("config/environments/")
 	if err := c.ReadInConfig(); err != nil {
-		panic(err)
+		fmt.Println(err.Error())
 	}
 }
 
