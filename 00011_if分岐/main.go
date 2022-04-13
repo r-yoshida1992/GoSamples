@@ -20,4 +20,11 @@ func main() {
 		fmt.Println("else")
 	}
 
+	// 条件の前に変数宣言もできる
+	if num2 := rand.Intn(4); num2 < 2 {
+		fmt.Println("num2は2より小さい")
+	} else {
+		fmt.Println("num2は2以上")
+	}
+
 }
