@@ -1,6 +1,6 @@
 module e_learning_sample
 
-go 1.17
+go 1.18
 
 require (
 	github.com/gin-contrib/sessions v0.0.4

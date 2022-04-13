@@ -8,6 +8,8 @@ import (
 	"net/http"
 )
 
+// GetLoginAction
+// login
 func GetLoginAction(c *gin.Context) {
 	c.HTML(200, "login.html", gin.H{})
 }

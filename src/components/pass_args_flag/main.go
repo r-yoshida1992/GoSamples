@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// 第一引数をコンソールに出力する
 func main() {
 	flag.Parse()
 	_, err := fmt.Println(flag.Args()[0])

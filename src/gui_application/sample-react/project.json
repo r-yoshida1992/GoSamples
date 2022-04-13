@@ -1,0 +1,25 @@
+{
+ "name": "sample-react",
+ "description": "Enter your project description",
+ "author": {
+  "name": "Ren Yoshida",
+  "email": "ren.yoshida1992@gmail.com"
+ },
+ "version": "0.1.0",
+ "binaryname": "sample-react",
+ "frontend": {
+  "dir": "frontend",
+  "install": "npm install",
+  "build": "npm run build",
+  "bridge": "src",
+  "serve": "npm run serve"
+ },
+ "tags": "",
+ "WailsVersion": "",
+ "CrossCompile": false,
+ "Platform": "",
+ "Architecture": "",
+ "LdFlags": "",
+ "GoPath": "",
+ "UseFirebug": false
+}
